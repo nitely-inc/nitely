@@ -1,0 +1,99 @@
+name: App Request
+description: Request an app
+title: "App Request "
+labels: ["app request"]
+assignees:
+  - C-EO
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this app request form!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: app-name
+    attributes:
+      label: App Name
+      description: What's the name of the app you're looking to add?
+      placeholder: Nitely
+    validations:
+      required: true
+  - type: textarea
+    id: hosting
+    attributes:
+      label: App Hosting
+      description: Where is the app's source code hosted?
+      placeholder: Github | https://github.com/example
+    validations:
+      required: true
+  - type: textarea
+    id: app-version
+    attributes:
+      label: App Version
+      description: What's the app version?
+      placeholder: v1.0.0
+    validations:
+      required: false
+  - type: textarea
+    id: about
+    attributes:
+      label: About the App
+      description: Please help us describe your app.
+      placeholder: A cat memes' app
+    validations:
+      required: true
+  - type: dropdown
+    id: systems
+    attributes:
+      label: Supported Systems
+      description: On which systems is your app supported?
+      multiple: true
+      options:
+        -  Raspberry Pi OS 32 bit
+        -  Raspberry Pi OS 64 bit
+        -  Raspberry Pi OS full
+        -  Twister OS 1.8.5 and onwards
+        -  Ubuntu 16.04
+        -  Ubuntu 18.04 and onwards
+        -  Kali Linux
+        -  Bullseye
+        -  Android
+        -  ChromeOS
+    validations:
+      required: true
+  - type: textarea
+    id: tutorial
+    attributes:
+      label: Tutorial
+      description: Does your app have a tutorial?
+      value: "Can this app run on RPi? If so, please provide a link to a tutorial if applicable.
+
+              Is this app something many GUI users would find useful?
+
+              Is this app installable with `sudo apt install`?"
+
+    validations:
+      required: false
+  - type: textarea
+    id: upload
+    attributes:
+      label: File Upload
+      description: Please upload your app files here according to the format given in the documentation.
+      placeholder: Upload your files here
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/C-EO/nitely/blob/master/docs/code_of_conduct.md) and [Contributing Guidlines](https://github.com/C-EO/nitely/blob/master/docs/contributing.md)
+      options:
+        - label: I agree to follow this project's **Code of Conduct** and **Contributing Guidlines**.
+          required: true

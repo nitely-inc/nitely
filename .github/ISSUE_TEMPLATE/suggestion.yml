@@ -1,0 +1,43 @@
+name: Suggestion
+description: File a suggestion
+title: "Suggestion "
+labels: ["suggestion", "enhancement", "feature"]
+assignees:
+  - C-EO
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this suggestion form!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion
+      description: What would you like to see added or deducted from Nitely?
+      placeholder: Cat Memes
+    validations:
+      required: true
+  - type: textarea
+    id: more-info
+    attributes:
+      label: More Info
+      description: Is this something you feel many of our users will find useful? (Make sure to give detailed info.)
+      placeholder: I think it's something they will find useful.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/C-EO/nitely/blob/master/docs/code_of_conduct.md) and [Contributing Guidlines](https://github.com/C-EO/nitely/blob/master/docs/contributing.md)
+      options:
+        - label: I agree to follow this project's **Code of Conduct** and **Contributing Guidlines**.
+          required: true
