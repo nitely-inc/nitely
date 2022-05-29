@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Dennis"
+  given-names: "Sebalemba"
+title: "Nitely"
+version: 1.0.0
+date-released: 2020-09-22
+url: "https://github.com/nitely-inc/nitely"

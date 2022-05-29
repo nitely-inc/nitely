@@ -1,0 +1,28 @@
+name: nitely
+title: Nitely
+summary: App Store for Debian Open Source Projects.
+description: |
+    An app store built to house apps that aren't on the Debian APT repositories.
+adopt-info: master
+contact: help.nitely@gmail.com
+donation: https://opencollective.com/nitely
+issues: https://github.com/Nitely-Developers/nitely/issues
+source-code: https://github.com/Nitely-Developers/nitely.git
+website: https://nitely.vercel.app
+license: GPL-3.0
+architectures:
+  - build-on: arm64, armhf 
+    run on: arm64, armhf
+apps:
+  nitely:
+    command: nitely
+    desktop: ~/.local/share/applications/nitely.desktop
+parts:
+  nitely:
+    plugin: bash
+    source: https://github.com/Nitely-Developers/nitely.git
+    source-type: git
+icon: icons/logo.png
+base: core18
+grade: stable
+confinement: strict
